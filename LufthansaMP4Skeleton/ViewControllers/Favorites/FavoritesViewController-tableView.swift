@@ -2,8 +2,8 @@
 //  FavoritesViewController-tableView.swift
 //  LufthansaMP4Skeleton
 //
-//  Created by Melanie Cooray on 3/6/19.
-//  Copyright © 2019 ___MaxAMiranda___. All rights reserved.
+//  Created by Aadhrik Kuila on 3/4/19.
+//  Copyright © 2019 Aadhrik Kuila. All rights reserved.
 //
 
 import UIKit
@@ -14,7 +14,7 @@ extension FavoritesViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteList", for: indexPath) as! FavoriteCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteList", for: indexPath) as! ListCell
         for subview in cell.contentView.subviews {
             subview.removeFromSuperview()
         }
@@ -25,7 +25,8 @@ extension FavoritesViewController : UITableViewDelegate, UITableViewDataSource {
         let index2 = date.index(date.endIndex, offsetBy: -7)
         let substring2 = date[index...]
         let substring1 = date[...index2]
-        cell.flightTime.text = String(substring1 + "   " + substring2)
+        cell.flightTime.text = String("At " + substring1 + " on " + substring2)
+        cell.backgroundColor = UIColor(hue: 0.5806, saturation: 1, brightness: 0.38, alpha: 1.0)
         return cell
     }
     
@@ -34,4 +35,5 @@ extension FavoritesViewController : UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "toFavoriteFlight", sender: self)
     }
+    
 }

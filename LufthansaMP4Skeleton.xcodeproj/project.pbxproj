@@ -7,27 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C66E9182233324800B1F1EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C66E9042233324800B1F1EB /* Main.storyboard */; };
+		0C66E922223332D100B1F1EB /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66E91F223332C300B1F1EB /* Flight.swift */; };
+		0C66E923223332D300B1F1EB /* Aircraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66E920223332C700B1F1EB /* Aircraft.swift */; };
+		0C66E924223332D500B1F1EB /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66E921223332C800B1F1EB /* Airport.swift */; };
+		0C66E9282233337400B1F1EB /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66E9272233336F00B1F1EB /* ListCell.swift */; };
+		0C66E92F223333C400B1F1EB /* AirportsInformationViewController-tableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66E92D223333BB00B1F1EB /* AirportsInformationViewController-tableview.swift */; };
+		0C66E930223333C600B1F1EB /* AirportsInformationViewController-uisetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66E92C223333BB00B1F1EB /* AirportsInformationViewController-uisetup.swift */; };
+		0C66E931223333C900B1F1EB /* AirportsInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66E92E223333BC00B1F1EB /* AirportsInformationViewController.swift */; };
+		0C66E933223333DD00B1F1EB /* AirportsInformationViewController-map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66E932223333DD00B1F1EB /* AirportsInformationViewController-map.swift */; };
+		0C66E9372233341600B1F1EB /* AirportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66E9362233340C00B1F1EB /* AirportsViewController.swift */; };
+		0C66E9382233341800B1F1EB /* AirportsViewController-map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66E9352233340A00B1F1EB /* AirportsViewController-map.swift */; };
+		0C66E93C2233342D00B1F1EB /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66E93A2233342800B1F1EB /* FavoritesViewController.swift */; };
+		0C66E93D2233342F00B1F1EB /* FavoritesViewController-tableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66E93B2233342900B1F1EB /* FavoritesViewController-tableView.swift */; };
+		0C66E9422233346800B1F1EB /* FlightInformationViewController-map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66E93F2233345900B1F1EB /* FlightInformationViewController-map.swift */; };
+		0C66E9432233346A00B1F1EB /* FlightInformationViewController-uisetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66E9402233345900B1F1EB /* FlightInformationViewController-uisetup.swift */; };
+		0C66E9442233346C00B1F1EB /* FlightInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66E9412233345900B1F1EB /* FlightInformationViewController.swift */; };
+		0C66E9482233348600B1F1EB /* FlightStatusViewController-uisetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66E9472233347A00B1F1EB /* FlightStatusViewController-uisetup.swift */; };
+		0C66E9492233348900B1F1EB /* FlightStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66E9462233347A00B1F1EB /* FlightStatusViewController.swift */; };
 		9F4CF6B3222A7BB700B8E242 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CF6B2222A7BB700B8E242 /* AppDelegate.swift */; };
-		9F4CF6B5222A7BB700B8E242 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CF6B4222A7BB700B8E242 /* ViewController.swift */; };
-		9F4CF6B8222A7BB700B8E242 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4CF6B6222A7BB700B8E242 /* Main.storyboard */; };
 		9F4CF6BA222A7BB800B8E242 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F4CF6B9222A7BB800B8E242 /* Assets.xcassets */; };
 		9F4CF6BD222A7BB800B8E242 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4CF6BB222A7BB800B8E242 /* LaunchScreen.storyboard */; };
 		9F4CF6C5222A7BF000B8E242 /* LufthansaAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CF6C4222A7BF000B8E242 /* LufthansaAPIClient.swift */; };
-		9F4CF6C7222A7C4300B8E242 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CF6C6222A7C4300B8E242 /* Flight.swift */; };
 		D86AF6286DAE2A43957DE55D /* Pods_LufthansaMP4Skeleton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9AFFB8948EBF9ED8E7EB31F /* Pods_LufthansaMP4Skeleton.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C66E9052233324800B1F1EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../FlightTracker/LufthansaMP4Skeleton/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0C66E91F223332C300B1F1EB /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
+		0C66E920223332C700B1F1EB /* Aircraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aircraft.swift; sourceTree = "<group>"; };
+		0C66E921223332C800B1F1EB /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
+		0C66E9272233336F00B1F1EB /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		0C66E92C223333BB00B1F1EB /* AirportsInformationViewController-uisetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AirportsInformationViewController-uisetup.swift"; sourceTree = "<group>"; };
+		0C66E92D223333BB00B1F1EB /* AirportsInformationViewController-tableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AirportsInformationViewController-tableview.swift"; sourceTree = "<group>"; };
+		0C66E92E223333BC00B1F1EB /* AirportsInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsInformationViewController.swift; sourceTree = "<group>"; };
+		0C66E932223333DD00B1F1EB /* AirportsInformationViewController-map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AirportsInformationViewController-map.swift"; sourceTree = "<group>"; };
+		0C66E9352233340A00B1F1EB /* AirportsViewController-map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AirportsViewController-map.swift"; sourceTree = "<group>"; };
+		0C66E9362233340C00B1F1EB /* AirportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsViewController.swift; sourceTree = "<group>"; };
+		0C66E93A2233342800B1F1EB /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		0C66E93B2233342900B1F1EB /* FavoritesViewController-tableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritesViewController-tableView.swift"; sourceTree = "<group>"; };
+		0C66E93F2233345900B1F1EB /* FlightInformationViewController-map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightInformationViewController-map.swift"; sourceTree = "<group>"; };
+		0C66E9402233345900B1F1EB /* FlightInformationViewController-uisetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightInformationViewController-uisetup.swift"; sourceTree = "<group>"; };
+		0C66E9412233345900B1F1EB /* FlightInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInformationViewController.swift; sourceTree = "<group>"; };
+		0C66E9462233347A00B1F1EB /* FlightStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightStatusViewController.swift; sourceTree = "<group>"; };
+		0C66E9472233347A00B1F1EB /* FlightStatusViewController-uisetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightStatusViewController-uisetup.swift"; sourceTree = "<group>"; };
 		79028E61641FF1291513E099 /* Pods-LufthansaMP4Skeleton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LufthansaMP4Skeleton.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LufthansaMP4Skeleton/Pods-LufthansaMP4Skeleton.debug.xcconfig"; sourceTree = "<group>"; };
 		9F4CF6AF222A7BB700B8E242 /* LufthansaMP4Skeleton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LufthansaMP4Skeleton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F4CF6B2222A7BB700B8E242 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9F4CF6B4222A7BB700B8E242 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9F4CF6B7222A7BB700B8E242 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F4CF6B9222A7BB800B8E242 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F4CF6BC222A7BB800B8E242 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F4CF6BE222A7BB800B8E242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F4CF6C4222A7BF000B8E242 /* LufthansaAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LufthansaAPIClient.swift; sourceTree = "<group>"; };
-		9F4CF6C6222A7C4300B8E242 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		A9AFFB8948EBF9ED8E7EB31F /* Pods_LufthansaMP4Skeleton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LufthansaMP4Skeleton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C30473CE715F38F9377BE1F1 /* Pods-LufthansaMP4Skeleton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LufthansaMP4Skeleton.release.xcconfig"; path = "Pods/Target Support Files/Pods-LufthansaMP4Skeleton/Pods-LufthansaMP4Skeleton.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -44,6 +74,84 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C66E91E223332BD00B1F1EB /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				0C66E91F223332C300B1F1EB /* Flight.swift */,
+				0C66E920223332C700B1F1EB /* Aircraft.swift */,
+				0C66E921223332C800B1F1EB /* Airport.swift */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		0C66E9252233336600B1F1EB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0C66E9272233336F00B1F1EB /* ListCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0C66E92A2233339600B1F1EB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0C66E934223333FF00B1F1EB /* Airports */,
+				0C66E92B223333B000B1F1EB /* AirportsInformation */,
+				0C66E93E2233344E00B1F1EB /* FlightInformation */,
+				0C66E9452233347100B1F1EB /* FlightStatus */,
+				0C66E9392233342000B1F1EB /* Favorites */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0C66E92B223333B000B1F1EB /* AirportsInformation */ = {
+			isa = PBXGroup;
+			children = (
+				0C66E92E223333BC00B1F1EB /* AirportsInformationViewController.swift */,
+				0C66E92D223333BB00B1F1EB /* AirportsInformationViewController-tableview.swift */,
+				0C66E932223333DD00B1F1EB /* AirportsInformationViewController-map.swift */,
+				0C66E92C223333BB00B1F1EB /* AirportsInformationViewController-uisetup.swift */,
+			);
+			path = AirportsInformation;
+			sourceTree = "<group>";
+		};
+		0C66E934223333FF00B1F1EB /* Airports */ = {
+			isa = PBXGroup;
+			children = (
+				0C66E9362233340C00B1F1EB /* AirportsViewController.swift */,
+				0C66E9352233340A00B1F1EB /* AirportsViewController-map.swift */,
+			);
+			path = Airports;
+			sourceTree = "<group>";
+		};
+		0C66E9392233342000B1F1EB /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				0C66E93A2233342800B1F1EB /* FavoritesViewController.swift */,
+				0C66E93B2233342900B1F1EB /* FavoritesViewController-tableView.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		0C66E93E2233344E00B1F1EB /* FlightInformation */ = {
+			isa = PBXGroup;
+			children = (
+				0C66E9412233345900B1F1EB /* FlightInformationViewController.swift */,
+				0C66E93F2233345900B1F1EB /* FlightInformationViewController-map.swift */,
+				0C66E9402233345900B1F1EB /* FlightInformationViewController-uisetup.swift */,
+			);
+			path = FlightInformation;
+			sourceTree = "<group>";
+		};
+		0C66E9452233347100B1F1EB /* FlightStatus */ = {
+			isa = PBXGroup;
+			children = (
+				0C66E9472233347A00B1F1EB /* FlightStatusViewController-uisetup.swift */,
+				0C66E9462233347A00B1F1EB /* FlightStatusViewController.swift */,
+			);
+			path = FlightStatus;
+			sourceTree = "<group>";
+		};
 		5DFF42AB87B8DEE958E341FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,10 +182,11 @@
 			isa = PBXGroup;
 			children = (
 				9F4CF6B2222A7BB700B8E242 /* AppDelegate.swift */,
-				9F4CF6B4222A7BB700B8E242 /* ViewController.swift */,
-				9F4CF6C6222A7C4300B8E242 /* Flight.swift */,
 				9F4CF6C4222A7BF000B8E242 /* LufthansaAPIClient.swift */,
-				9F4CF6B6222A7BB700B8E242 /* Main.storyboard */,
+				0C66E91E223332BD00B1F1EB /* Parsers */,
+				0C66E9252233336600B1F1EB /* Cells */,
+				0C66E92A2233339600B1F1EB /* ViewControllers */,
+				0C66E9042233324800B1F1EB /* Main.storyboard */,
 				9F4CF6B9222A7BB800B8E242 /* Assets.xcassets */,
 				9F4CF6BB222A7BB800B8E242 /* LaunchScreen.storyboard */,
 				9F4CF6BE222A7BB800B8E242 /* Info.plist */,
@@ -124,7 +233,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = ___MaxAMiranda___;
+				ORGANIZATIONNAME = "___MaxAMiranda___";
 				TargetAttributes = {
 					9F4CF6AE222A7BB700B8E242 = {
 						CreatedOnToolsVersion = 10.1;
@@ -154,9 +263,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C66E9182233324800B1F1EB /* Main.storyboard in Resources */,
 				9F4CF6BD222A7BB800B8E242 /* LaunchScreen.storyboard in Resources */,
 				9F4CF6BA222A7BB800B8E242 /* Assets.xcassets in Resources */,
-				9F4CF6B8222A7BB700B8E242 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,7 +280,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LufthansaMP4Skeleton/Pods-LufthansaMP4Skeleton-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-LufthansaMP4Skeleton/Pods-LufthansaMP4Skeleton-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -184,7 +293,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LufthansaMP4Skeleton/Pods-LufthansaMP4Skeleton-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LufthansaMP4Skeleton/Pods-LufthansaMP4Skeleton-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F14E9309BCCB2712278FC91E /* [CP] Check Pods Manifest.lock */ = {
@@ -216,20 +325,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C66E9422233346800B1F1EB /* FlightInformationViewController-map.swift in Sources */,
+				0C66E923223332D300B1F1EB /* Aircraft.swift in Sources */,
+				0C66E9282233337400B1F1EB /* ListCell.swift in Sources */,
+				0C66E9372233341600B1F1EB /* AirportsViewController.swift in Sources */,
+				0C66E93D2233342F00B1F1EB /* FavoritesViewController-tableView.swift in Sources */,
+				0C66E922223332D100B1F1EB /* Flight.swift in Sources */,
 				9F4CF6C5222A7BF000B8E242 /* LufthansaAPIClient.swift in Sources */,
-				9F4CF6C7222A7C4300B8E242 /* Flight.swift in Sources */,
-				9F4CF6B5222A7BB700B8E242 /* ViewController.swift in Sources */,
+				0C66E931223333C900B1F1EB /* AirportsInformationViewController.swift in Sources */,
+				0C66E92F223333C400B1F1EB /* AirportsInformationViewController-tableview.swift in Sources */,
+				0C66E933223333DD00B1F1EB /* AirportsInformationViewController-map.swift in Sources */,
+				0C66E93C2233342D00B1F1EB /* FavoritesViewController.swift in Sources */,
+				0C66E924223332D500B1F1EB /* Airport.swift in Sources */,
+				0C66E930223333C600B1F1EB /* AirportsInformationViewController-uisetup.swift in Sources */,
+				0C66E9382233341800B1F1EB /* AirportsViewController-map.swift in Sources */,
+				0C66E9432233346A00B1F1EB /* FlightInformationViewController-uisetup.swift in Sources */,
+				0C66E9492233348900B1F1EB /* FlightStatusViewController.swift in Sources */,
 				9F4CF6B3222A7BB700B8E242 /* AppDelegate.swift in Sources */,
+				0C66E9482233348600B1F1EB /* FlightStatusViewController-uisetup.swift in Sources */,
+				0C66E9442233346C00B1F1EB /* FlightInformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9F4CF6B6222A7BB700B8E242 /* Main.storyboard */ = {
+		0C66E9042233324800B1F1EB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9F4CF6B7222A7BB700B8E242 /* Base */,
+				0C66E9052233324800B1F1EB /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -367,7 +491,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SVB4USWED5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LufthansaMP4Skeleton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -386,7 +510,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SVB4USWED5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LufthansaMP4Skeleton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

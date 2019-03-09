@@ -2,8 +2,8 @@
 //  FlightStatusViewController.swift
 //  LufthansaMP4Skeleton
 //
-//  Created by Melanie Cooray on 3/2/19.
-//  Copyright © 2019 ___MaxAMiranda___. All rights reserved.
+//  Created by Aadhrik Kuila on 3/4/19.
+//  Copyright © 2019 Aadhrik Kuila. All rights reserved.
 //
 
 import UIKit
@@ -29,6 +29,7 @@ class FlightStatusViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(hue: 0.5806, saturation: 1, brightness: 0.38, alpha: 1.0)
         UserDefaults.standard.set(0, forKey: "favoritesCount")
         initUI()
     }
@@ -50,37 +51,31 @@ class FlightStatusViewController: UIViewController {
     }
     
     @objc func buttonPress(_ sender: Any) {
-        
-        //Gets new auth token and then gets flight status once that is successful
-        guard let flightNumber = flightNumberTextField.text else {
+            guard let flightNumber = flightNumberTextField.text else {
             showError(title: "Information Missing", message: "No Flight Number Entered.")
             return
         }
         
         self.loadingScreen = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
-        self.loadingScreen.backgroundColor = .white
+        self.loadingScreen.backgroundColor = UIColor(hue: 0.5806, saturation: 1, brightness: 0.38, alpha: 1.0)
         self.view.addSubview(self.loadingScreen)
         self.loadingText = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 100))
         self.loadingText.center = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height/2)
-        self.loadingText.text = "Loading..."
+        self.loadingText.text = "Finding Flight..."
+        self.loadingText.font = UIFont(name: "Baskerville", size: 30)
+        self.loadingText.textColor = UIColor(hue: 0.1139, saturation: 0.91, brightness: 0.99, alpha: 1.0)
         self.loadingText.textAlignment = .center
         self.view.addSubview(self.loadingText)
     
         LufthansaAPIClient.getAuthToken() {
             LufthansaAPIClient.getFlightStatus(flightNum: "\(flightNumber)", date: "\(self.selectedDate!)") { flt in
-                //print(flt.timeStatus)
-                //self.label.text = flt.timeStatus
                 self.flight = flt
                 LufthansaAPIClient.getAirport(airportCode: self.flight.originAirport!) { air in
                     self.originAirport = air
                     self.flight.originAirportObject = air
-                    //print(air.title)
-                    //print(air.coordinate)
                     LufthansaAPIClient.getAirport(airportCode: self.flight.destinationAirport!) { air in
                         self.destinationAirport = air
                         self.flight.destinationAirportObject = air
-                        //print(air.title)
-                        //print(air.coordinate)
                         LufthansaAPIClient.getAircraft(type: self.flight.aircraft!) { craft in
                             self.aircraft = craft
                             self.flight.aircraftObject = self.aircraft

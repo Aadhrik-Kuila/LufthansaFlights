@@ -2,8 +2,8 @@
 //  FlightInformationViewController.swift
 //  LufthansaMP4Skeleton
 //
-//  Created by Melanie Cooray on 3/4/19.
-//  Copyright © 2019 ___MaxAMiranda___. All rights reserved.
+//  Created by Aadhrik Kuila on 3/4/19.
+//  Copyright © 2019 Aadhrik Kuila. All rights reserved.
 //
 
 import UIKit
@@ -11,41 +11,27 @@ import MapKit
 
 class FlightInformationViewController: UIViewController {
     
-    var backgroundColor: UIColor!
-    
     var date: String!
-    
     var flight: Flight!
     var originAirport: Airport!
     var destinationAirport: Airport!
-    
     var timeStatusLabel: UILabel!
-    
     var depAirportButton: UIButton!
     var arrAirportButton: UIButton!
-    var arrow: UIImage!
-    var arrowView: UIImageView!
-    
+    var arrow: UILabel!
     var depTimeLabel: UILabel!
     var arrTimeLabel: UILabel!
-    
     var depGateLabel: UILabel!
     var arrGateLabel: UILabel!
-    
     var favoriteButton: UIBarButtonItem!
     var favorite = false
-    
     var mapView: MKMapView!
-    
     var selectedAirport: Airport!
-    
     var aircraft: Aircraft!
     var aircraftLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         initUI()
         createAirports()
         centerMap()
@@ -68,14 +54,12 @@ class FlightInformationViewController: UIViewController {
         UserDefaults.standard.set(substring1, forKey: "\(count2)")
         print(date!)
         UserDefaults.standard.set(count2 + 1, forKey: "favoritesCount")
-        print("Favorite!")
         flight.favorite = true
-        favoriteButton = UIBarButtonItem(title: "Saved!", style: .plain, target: self, action: nil)
+        favoriteButton = UIBarButtonItem(title: "Saved to Favorites!", style: .plain, target: self, action: nil)
         self.navigationItem.setRightBarButton(favoriteButton, animated: true)
     }
     
     func createAirports() {
-        //let origin = Airport(location: CLLocationCoordinate2D(latitude: 37.866632800000005, longitude: -122.25206805335353), name: "Max", hobby: "Being a Complete Baller")
         mapView.addAnnotation(flight.originAirportObject)
         mapView.addAnnotation(flight.destinationAirportObject)
     }

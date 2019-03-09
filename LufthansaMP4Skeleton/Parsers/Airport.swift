@@ -2,8 +2,8 @@
 //  Airport.swift
 //  LufthansaMP4Skeleton
 //
-//  Created by Melanie Cooray on 3/5/19.
-//  Copyright © 2019 ___MaxAMiranda___. All rights reserved.
+//  Created by Aadhrik Kuila on 3/4/19.
+//  Copyright © 2019 Aadhrik Kuila. All rights reserved.
 //
 
 import Foundation
@@ -13,8 +13,10 @@ import MapKit
 class Airport: NSObject, MKAnnotation {
     
     var coordinate: CLLocationCoordinate2D
+    
     var latitude: Double!
     var longitude: Double!
+    
     var title: String?
     var subtitle: String?
     
@@ -25,4 +27,5 @@ class Airport: NSObject, MKAnnotation {
         title = data["AirportCode"].stringValue
         subtitle = data["Names"]["Name"]["$"].stringValue
     }
+    
 }

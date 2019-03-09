@@ -2,8 +2,8 @@
 //  AirportsViewController.swift
 //  LufthansaMP4Skeleton
 //
-//  Created by Melanie Cooray on 3/2/19.
-//  Copyright © 2019 ___MaxAMiranda___. All rights reserved.
+//  Created by Aadhrik Kuila on 3/4/19.
+//  Copyright © 2019 Aadhrik Kuila. All rights reserved.
 //
 
 import UIKit
@@ -12,7 +12,6 @@ import MapKit
 class AirportsViewController: UIViewController {
     
     var loadingLabel: UILabel!
-    
     var mapView: MKMapView!
     var airports: [Airport] = []
     var selectedAirport: Airport!
@@ -21,7 +20,6 @@ class AirportsViewController: UIViewController {
         super.viewDidLoad()
         showLoadingScreen()
         loadAirports()
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,10 +27,13 @@ class AirportsViewController: UIViewController {
     }
     
     func showLoadingScreen() {
+        self.view.backgroundColor = UIColor(hue: 0.5806, saturation: 1, brightness: 0.38, alpha: 1.0)
         loadingLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 100))
         loadingLabel.center = CGPoint(x: view.frame.width/2, y: view.frame.height/2)
-        loadingLabel.text = "Loading..."
+        loadingLabel.text = "Finding Airports..."
+        loadingLabel.textColor = UIColor(hue: 0.1139, saturation: 0.91, brightness: 0.99, alpha: 1.0)
         loadingLabel.textAlignment = .center
+        loadingLabel.font = UIFont(name: "Baskerville", size: 30)
         view.addSubview(loadingLabel)
     }
     
@@ -41,7 +42,6 @@ class AirportsViewController: UIViewController {
             LufthansaAPIClient.getLHAirports(offset: 0) { lst in
                 for i in 0..<lst.count {
                     self.airports.append(lst[i])
-                    //print(lst[i].title)
                 }
                 LufthansaAPIClient.getLHAirports(offset: 100) { lst2 in
                     for i in 0..<lst2.count {
@@ -52,7 +52,6 @@ class AirportsViewController: UIViewController {
                             self.airports.append(lst3[i])
                         }
                         self.createMap()
-                        self.centerMap()
                         self.createAnnotations()
                     }
                 }
@@ -72,15 +71,10 @@ class AirportsViewController: UIViewController {
         }
     }
     
-    func centerMap() {
-        let location = CLLocationCoordinate2D(latitude: 54.5260, longitude: 15.2551)
-        let region = MKCoordinateRegion(center: location, latitudinalMeters: 3000000, longitudinalMeters: 3000000)
-        self.mapView.setRegion(region, animated : true)
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let resultVC = segue.destination as? AirportsInformationViewController {
             resultVC.airport = selectedAirport
         }
     }
+    
 }

@@ -2,20 +2,20 @@
 //  AirportsInformationViewController-tableview.swift
 //  LufthansaMP4Skeleton
 //
-//  Created by Melanie Cooray on 3/5/19.
-//  Copyright © 2019 ___MaxAMiranda___. All rights reserved.
+//  Created by Aadhrik Kuila on 3/4/19.
+//  Copyright © 2019 Aadhrik Kuila. All rights reserved.
 //
 
 import UIKit
 
-
 extension AirportsInformationViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return toShow.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FlightList", for: indexPath) as! DepartureCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FlightList", for: indexPath) as! ListCell
         for subview in cell.contentView.subviews {
             subview.removeFromSuperview()
         }
@@ -27,9 +27,9 @@ extension AirportsInformationViewController: UITableViewDelegate, UITableViewDat
         }
         let index = date.index(date.endIndex, offsetBy: -5)
         let index2 = date.index(date.endIndex, offsetBy: -7)
-        let substring2 = date[index...]
-        let substring1 = date[...index2]
-        cell.flightTime.text = String(substring1 + "   " + substring2)
+        let substring1 = date[index...]
+        let substring2 = date[...index2]
+        cell.flightTime.text = String("At " + substring1 + " on " + substring2)
         return cell
     }
     
@@ -39,7 +39,8 @@ extension AirportsInformationViewController: UITableViewDelegate, UITableViewDat
         self.view.addSubview(self.loadingScreen)
         self.loadingText = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 100))
         self.loadingText.center = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height/2)
-        self.loadingText.text = "Loading..."
+        self.loadingText.text = "Retrieving Flight Info..."
+        self.loadingText.font = UIFont(name: "Baskerville", size: 30)
         self.loadingText.textAlignment = .center
         self.view.addSubview(self.loadingText)
         selectedFlight = toShow[indexPath[1]]
